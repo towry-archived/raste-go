@@ -2,8 +2,8 @@
 package raste
 
 type Context struct {
-	mode modeType
-	nameSet map[string]string
+	mode modeType 	// The mode of the context
+	nameSet map[string]string	// Css class names
 }
 
 type modeType int
@@ -14,9 +14,9 @@ const (
 	ModeHtml
 )
 
-func NewContext(mod modeType) *Context {
+func NewContext(mode modeType) *Context {
 	return &Context{
-		mode: mod,
+		mode: mode,
 		nameSet: make(map[string]string),
 	}
 }

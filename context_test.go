@@ -16,7 +16,7 @@ func TestContextNew(t *testing.T) {
 }
 
 func TestContextNameSet(t *testing.T) {
-	c := NewContext(ModeHtml)
+	c := NewContext(ModeCss)
 
 	c.nameSet["index/MainApp"] = "2b"
 	c.nameSet["index/ModalComponent"] = "db"
