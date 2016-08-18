@@ -1,6 +1,12 @@
-<div class="test-a _nsAMainApp">
+<div class="test-a _indexAMainApp">
 </div>
 
-<div class="test-b _nsBMainApp">
+<div class="test-b _indexBMainApp">
 	<span>hi</span>
+
+	<link rel="stylesheet" type="text/css" href="{{ static_url('abc/efg.css') }}">
+
+	{% if ok %}
+	<span>ok</span>
+	{% end %}
 </div>

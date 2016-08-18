@@ -61,3 +61,13 @@ func (c *Context) GetName(name string) (string, bool) {
 
 	return "", false
 }
+
+func (c *Context) String() string {
+	got := ""
+
+	for key := range c.nameSet {
+		got += (key + ":" + c.nameSet[key] + "\n")
+	}
+
+	return got
+}

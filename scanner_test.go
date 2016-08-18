@@ -5,7 +5,7 @@ import (
 	"os"
 	"fmt"
 	"testing"
-	"text/scanner"
+	"github.com/towry/raste-go/scanner"
 )
 
 // name: less file name
@@ -17,7 +17,7 @@ func readLessFile(name string) {
 	}
 	defer reader.Close()
 
-	// got := ""
+	got := ""
 	s := new(scanner.Scanner).Init(reader)
 
 	for {
@@ -28,16 +28,15 @@ func readLessFile(name string) {
 
 		ch := s.TokenText()
 
-		if tok == scanner.Int || tok == scanner.Float {
-			fmt.Println("got a number", ch)
-		} else {
-			fmt.Println(ch)
-		}
+		fmt.Print(ch)
+
+		// got += ch;
 	}
 
 	// fmt.Println(got)
+	_ = got
 }
 
 func TestReadLessFile(t *testing.T) {
-	readLessFile("./__test__/index.less")
+	readLessFile("./__test__/index.html")
 }
