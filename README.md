@@ -10,7 +10,7 @@ import "os"
 import "github.com/towry/raste-go"
 
 func main() {
-	cssfiles := [2]string{"a.css", b.css"}
+	cssfiles := [2]string{"a.css", "b.css"}
 	htmlfiles := [1]string{"a.html"}
 
 	ctx := raste.NewContext(raste.ModeCss)
