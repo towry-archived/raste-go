@@ -127,7 +127,10 @@ func transformCssName(context *Context, name string) string {
 // Replace the css class names.
 // names is string like "a-class anotherClass"
 func replaceClassName(context *Context, names string) string {
+	// remove the quotes
 	names = strings.Replace(names, "\"", "", 2)
+	names = strings.Replace(names, "'", "", 2)
+
 	got := "'"
 	// Split it by white space
 	list := strings.Split(names, " ");
